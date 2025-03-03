@@ -8,11 +8,13 @@ import Layout from './Layout.jsx'
 import Home from './Components/Home/Home.jsx'
 import Header from './Components/Header/Header.jsx'
 import Footer from './Components/Footer/Footer.jsx'
+import About from './Components/About/About.jsx'
 
 const router = createBrowserRouter (
   createRoutesFromElements(
     <Route path='/' element={<Layout />} >
       <Route path='' element={<Home />} />
+      <Route path='/About' element={<About />} />
     </Route>
   )
 )
@@ -20,7 +22,7 @@ const router = createBrowserRouter (
 
 ReactDom.createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    
     <RouterProvider router = {router} />
   </StrictMode>,
 )
